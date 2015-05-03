@@ -1,0 +1,135 @@
+/*
+ *
+ *
+ */
+
+
+
+body {
+	/*background-image: url(2-pinksherbet-2.jpg);*/
+	/*-webkit-background-size: cover;*/
+	overflow: hidden;
+}
+
+
+
+.schedule {
+	font-family: 'Helvetica';
+	overflow: hidden;
+	
+	padding-top: 50pt;
+	/*margin: auto;*/
+}
+
+
+
+.weekdays {
+	font-family: 'Helvetica';
+	font-size: 18pt;
+
+	/*margin: auto 30pt auto 30pt;*/
+	margin: auto;
+
+	/* Make nested columns of equal width */
+	display: table;
+	width: 70%;
+	height: 100%;
+	table-layout: fixed;
+}
+
+
+
+.column {
+	display: table-cell;
+	height: 100%;
+	/*margin-left: 20pt;*/
+	/*margin-right: 20pt;*/
+}
+
+
+
+.current {
+	background-color: #C64E7B !important;
+	-webkit-transition: background-color 0.7s;
+}
+
+
+
+.current:hover {
+	/*background-color: #D85AE0 !important;*/
+	background-color: rgba(200, 130, 50, 0.4) !important;
+	-webkit-transition: background-color 0.7s;
+}
+
+
+
+.activity {
+	/*min-height: 200pt;*/
+	height: 100pt;
+	width: 100%;
+	
+	padding: 0pt;
+	/*border-spacing: 12pt 12pt;*/
+
+	overflow: hidden;
+
+	background-color: #E4A2D7;
+	-webkit-transition: background-color 0.7s;
+}
+
+
+
+.activity:hover {
+	background-color: #E4B9E2;
+	-webkit-transition: background-color 0.7s;
+}
+
+
+
+.slider {
+	background: #CCF154;
+	
+	width: 100%;
+	height: 100%;
+	padding: 5pt;
+	
+	position: relative;
+	right: 95%;
+	
+	-webkit-transition: all 0.35s linear;
+}
+
+
+.activity:hover .slider {
+	/**/
+	right: 0%;
+	-webkit-transition: all 0.35s linear;
+}
+
+
+
+.highlighted {
+	background-color: #32D0AD;
+	-webkit-transition: background-color 0.7s;
+}
+
+
+
+.options {
+	background-color: #3A88D7;
+	/*margin: auto;*/
+}
+
+
+
+#ruler {
+	position: absolute;
+	width: 100%;
+	height: 1pt;
+	background-color: #F00;
+	z-index: 1;
+
+	pointer-events: none;
+	/*border: 1pt #13F solid;*/
+	/*box-shadow:inset 0px 0px 12px*/
+}
