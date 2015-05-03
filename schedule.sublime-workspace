@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"f",
+				"f	Anonymous Function"
+			],
+			[
+				"rotate",
+				"rotateX()"
+			],
+			[
+				"web",
+				"-webkit-transform"
+			],
+			[
+				"webkit-t",
+				"-webkit-transition"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"webkt",
+				"-webkit-transition"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
 				"inter",
 				"intercalate	[a] -> [[a]] -> [a]"
 			],
@@ -37,10 +69,6 @@
 			],
 			[
 				"back",
-				"background-color"
-			],
-			[
-				"bac",
 				"background-color"
 			],
 			[
@@ -376,10 +404,6 @@
 				"pyramidMesh"
 			],
 			[
-				"f",
-				"forv	Vector For Loop"
-			],
-			[
 				"pyra",
 				"pyramidMesh"
 			],
@@ -490,30 +514,6 @@
 			[
 				"So",
 				"soundGenerator"
-			],
-			[
-				"p1",
-				"p1Collides"
-			],
-			[
-				"off",
-				"edgeOff"
-			],
-			[
-				"pla",
-				"player"
-			],
-			[
-				"samp",
-				"samples_per_second"
-			],
-			[
-				"sam",
-				"samples_per_second"
-			],
-			[
-				"hi",
-				"hitSound"
 			]
 		]
 	},
@@ -523,18 +523,48 @@
 			"file": "schedule.html",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 240,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "",
-			"file": "test.html",
-			"file_size": 0,
-			"file_write_time": 130748135156162882,
+			"file": "schedule.css",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 1718,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "/*\n * schedule.js\n * ?\n *\n * Jonatan H Sundqvist\n * April 30 2015\n *\n *\n * TODO | - \n *        - \n *\n * SPEC | -\n *        -\n *\n */\n\n\n\nvar weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];\nvar schedule = (function() {\n\n})();\n\n\n// TODO: Move to separate file\nvar languages = {\n	'english': {\n		monday:    'Monday',\n		tuesday:   'Tuesday',\n		wednesday: 'Wednesday',\n		thursday:  'Thursday',\n		friday:    'Friday',\n		saturday:  'Saturday',\n		sunday:    'Sunday'\n	},\n\n	'spanish': {\n		monday:    'lunes',\n		tuesday:   'martes',\n		wednesday: 'miércoles',\n		thursday:  'jueves',\n		friday:    'viernes',\n		saturday:  'sábado',\n		sunday:    'domingo'\n	},\n\n	'swedish': {\n		monday:    'måndag',\n		tuesday:   'tisdag',\n		wednesday: 'onsdag',\n		thursday:  'torsdag',\n		friday:    'fredag',\n		saturday:  'lördag',\n		sunday:    'söndag'\n	}\n\n}\n\n\n\nfunction diagram(data) {\n	// var div = new DOMElement();\n}\n\n\n\n$(document).ready(function() {\n\n	// Highlight the current day\n	var today = new Date();\n	var day   = today.getDay();\n	console.log('Today is ' + weekdays[day] + '.');\n	// $('.weekdays .column div:not(:first-child)').addClass('activity'); // I could do this manually. Eh...\n	$('.' + weekdays[day]).addClass('current');\n\n\n	//\n	weekdays.map(function(day, index, days) {\n		console.log('.' + day);\n		$('.' + day).hover(function(element) {\n			$('.' + day).addClass('highlighted');\n		}, function(element) {\n			$('.' + day).removeClass('highlighted');\n		});\n	});\n\n\n	//\n	$('select[name=\"language\"]').change(function(ev) {\n		var element = this;\n		console.log(ev);\n		weekdays.slice(1, 6).map(function(day, i, days) {\n			$('.weekdays div.' + day + '> div:first-child').html(languages[element.value.toLowerCase()][day.toLowerCase()].toUpperCase());\n		});\n	});\n\n\n	//\n	$(document).mousemove(function(ev) {\n\n		var top    = $('.activities').offset().top\n		var bottom = $('.activities').innerHeight() + top;\n\n		if (ev.pageY < top || ev.pageY > bottom) { return; }\n\n		var time  = (ev.pageY - top) * (8*3600)/(bottom - top); //\n		var hours = String(Math.floor(time/3600));\n		var mins  = String(Math.floor(time/60)%60);\n		$('#ruler').css({'top': ev.pageY})\n		           .html((hours.length === 1 ? '0' + hours : hours) + ':' + (mins.length === 1 ? '0' + mins : mins));\n	});\n\n});",
+			"file": "schedule.js",
+			"file_size": 2405,
+			"file_write_time": 130750890258310399,
+			"settings":
+			{
+				"buffer_size": 2288,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!--  -->\n\n<!DOCTYPE html>\n\n<html>\n<head>\n	<meta encoding='UTF-8'>\n	<!-- meta language -->\n	<!-- meta author -->\n	<link rel='stylesheet' href='pageturner.css'>\n	<!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->\n	<!-- <script src='pageturner.js'></script> -->\n	<title>Page Turner</title>\n</head>\n<body>\n	<div class='binder'>\n		<div id='behind'  class='page'>I SHOULD BE BEHIND</div>\n		<div id='infront' class='page'>I SHOULD BE IN FRONT</div>\n	</div>\n</body>\n</html>",
+			"file": "pageturner.html",
+			"file_size": 533,
+			"file_write_time": 130749933174072015,
+			"settings":
+			{
+				"buffer_size": 513,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "/*\n *\n *\n */\n\n\n\nbody {\n	padding: 0pt;\n	margin:  0pt;\n}\n\n\n\n.binder {\n	width: 25%;\n	height: 80%;\n\n	margin: 60pt;\n	padding: 0pt;\n\n	position: absolute;\n	/*overflow: hidden;*/\n\n	-webkit-perspective: 1500px;\n	-webkit-perspective-origin: 50% 0%;\n\n}\n\n\n\n.binder:hover #infront.page {\n	-webkit-perspective: 600px;\n	-webkit-transform: rotateY(-60deg);\n	-webkit-transform-origin: 0% 50%;\n	-webkit-transition: -webkit-transform 3s;\n	/*perspective: 600px;*/\n}\n\n\n\n.page {\n	position: absolute;\n	width: 100%;\n	height: 100%;\n\n	padding: 12pt;\n	margin: 0pt;\n\n	text-align: center;\n	vertical-align: middle;\n\n	/*bottom: 0%;*/\n	/*-webkit-transition: all 0.4s ease-in;*/\n\n}\n\n\n\n#infront {\n	background-color: #CF0305;\n}\n\n\n.binder:hover #infront {\n	/*bottom: 100%;*/\n	/*-webkit-transition: all 1.5s ease-in;*/\n}\n\n\n#behind {\n	background-color: #CF03DD;\n}",
+			"file": "pageturner.css",
+			"file_size": 895,
+			"file_write_time": 130749934324298496,
+			"settings":
+			{
+				"buffer_size": 825,
 				"line_ending": "Windows"
 			}
 		}
@@ -590,10 +620,66 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "save",
+		"height": 105.0,
+		"last_filter": "check",
 		"selected_items":
 		[
+			[
+				"check",
+				"Git: Checkout Tag"
+			],
+			[
+				"ad",
+				"Git: Add..."
+			],
+			[
+				"bra",
+				"Git: Change Branch"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"wra",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"branch",
+				"Git: Change Branch"
+			],
+			[
+				"HTM",
+				"Set Syntax: HTML"
+			],
+			[
+				"snippet",
+				"Snippet: html"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"synta",
+				"Set Syntax: HTML"
+			],
+			[
+				"snipp",
+				"Snippet: html"
+			],
+			[
+				"synt",
+				"Set Syntax: HTML"
+			],
 			[
 				"save",
 				"Project: Save As"
@@ -635,14 +721,6 @@
 				"Set Syntax: Python"
 			],
 			[
-				"ad",
-				"Git: Add..."
-			],
-			[
-				"co",
-				"Git: Commit"
-			],
-			[
 				"cs",
 				"Set Syntax: CSS3"
 			],
@@ -675,18 +753,6 @@
 				"Preferences: Key Bindings - User"
 			],
 			[
-				"htm",
-				"Snippet: html"
-			],
-			[
-				"add",
-				"Git: Add..."
-			],
-			[
-				"snipp",
-				"Snippet: html"
-			],
-			[
 				"snippe",
 				"Snippet: html"
 			],
@@ -701,10 +767,6 @@
 			[
 				"gh",
 				"Build With: HaskellConsole - GHCi"
-			],
-			[
-				"close",
-				"Project: Close"
 			],
 			[
 				"build",
@@ -1073,41 +1135,9 @@
 			[
 				"reposi",
 				"Preferences: Package Control Settings – Default"
-			],
-			[
-				"c++",
-				"Set Syntax: C++"
-			],
-			[
-				"rein",
-				"Indentation: Reindent Lines"
-			],
-			[
-				"syntax c",
-				"Set Syntax: C"
-			],
-			[
-				"snippet",
-				"Snippet: Object Value JS"
-			],
-			[
-				"lint",
-				"SublimeLinter: Lint This View"
-			],
-			[
-				"tab",
-				"Indentation: Convert to Tabs"
-			],
-			[
-				"fold",
-				"Code Folding: Fold Tag Attributes"
-			],
-			[
-				"folding",
-				"Code Folding: Unfold All"
 			]
 		],
-		"width": 464.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -1154,8 +1184,14 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Users/Jonatan/Desktop/Web dev/Schedule"
+	],
 	"file_history":
 	[
+		"/C/Users/Jonatan/Desktop/Web dev/Schedule/pageturner.html",
+		"/C/Users/Jonatan/Desktop/Web dev/Schedule/test.html",
 		"/C/Users/Jonatan/Desktop/Web dev/Sudoku/jokewordcount.py",
 		"/C/Users/Jonatan/Desktop/Git Sandbox/saga.txt",
 		"/C/Users/Jonatan/Desktop/Web dev/Sudoku/sudoku.css",
@@ -1281,13 +1317,11 @@
 		"/C/Users/Jonatan/Desktop/Hemsida/Projekt/Bildspel/bildspel.html",
 		"/C/Users/Jonatan/Desktop/Hemsida/Projekt/Bildspel/bildspel.css",
 		"/C/Users/Jonatan/Desktop/Hemsida/Projekt/Bildspel/bildspel.js",
-		"/C/Users/Jonatan/Desktop/Python/modules/SwiftUtils/__init__.py",
-		"/C/Users/Jonatan/Desktop/Python/Pong.py",
-		"/C/Users/Jonatan/AppData/Roaming/Sublime Text 3/Packages/User/multiline.sublime-snippet"
+		"/C/Users/Jonatan/Desktop/Python/modules/SwiftUtils/__init__.py"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
@@ -1302,6 +1336,61 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"weekdays",
+			"</div>\n				<div class='activity'>",
+			".schedule ",
+			".schedule table tbody",
+			"</div>",
+			"Friday",
+			"</div>",
+			"'><",
+			", ",
+			"hours",
+			"mins",
+			"ev.pageY",
+			"3600",
+			"év",
+			"margin:",
+			"ev",
+			"</div>",
+			"><",
+			"Sunday",
+			"Saturday",
+			"Friday",
+			"Thursday",
+			"Wednesday",
+			"Tuesday",
+			"Monday",
+			"english",
+			"Sunday",
+			"Saturday",
+			"Friday",
+			"Wednesday",
+			"Tuesday",
+			",",
+			", ",
+			"overflow",
+			"</td>",
+			"left",
+			"p",
+			";\n}",
+			";\n",
+			"height: 100%;",
+			"schedule",
+			"='.",
+			"schedule",
+			"weekdays[day]",
+			"activity",
+			"Friday",
+			"<th>",
+			"h>",
+			">",
+			"margin",
+			"0.4",
+			"<td class='Wednesday'></td>",
+			"#",
+			"Friday",
+			"Monday",
 			"<",
 			"\\\\d",
 			"read",
@@ -1374,62 +1463,7 @@
 			"Column",
 			"[",
 			"return",
-			"imag",
-			"g",
-			"branch",
-			"beg",
-			"position",
-			"anchor",
-			"4",
-			"name",
-			"options",
-			", ",
-			"colourPrint",
-			"mood",
-			"'",
-			",",
-			")",
-			"''",
-			"'",
-			"IOUtil",
-			",",
-			"getcwd()",
-			"memset",
-			"y",
-			"b",
-			"x",
-			"a",
-			"callable",
-			"loopAd",
-			"widget",
-			"fstTile",
-			"refactored",
-			"isEmpty",
-			"update",
-			"9",
-			"400",
-			"\\",
-			"1)",
-			"image.size",
-			"\\",
-			"image.size[",
-			".",
-			",",
-			"''",
-			"makeSizeFollowup",
-			"input",
-			"function",
-			"print",
-			"frame.col",
-			".col",
-			".empty",
-			"first",
-			"tile",
-			"first",
-			"\\",
-			"empty",
-			"in puzzle",
-			"tile"
+			"imag"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1465,7 +1499,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1474,54 +1508,144 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 240,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								240,
+								240
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/SublimeLinter/fixed-syntaxes/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "schedule.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1315,
+								1315
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS3/CSS3.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1560.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "test.html",
+					"buffer": 2,
+					"file": "schedule.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 2288,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1248,
+								1248
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1020.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "pageturner.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 513,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								374,
+								374
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SublimeLinter/fixed-syntaxes/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "pageturner.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 825,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								245,
+								245
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS3/CSS3.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1592,16 +1716,24 @@
 		"selected_items":
 		[
 			[
+				"sc",
+				"schedule.js"
+			],
+			[
+				"s",
+				"schedule.html"
+			],
+			[
+				"p",
+				"pageturner.html"
+			],
+			[
 				"i",
 				"introduction.css"
 			],
 			[
 				"ht",
 				"sudoku.html"
-			],
-			[
-				"s",
-				"sudoku.js"
 			],
 			[
 				"cs",
