@@ -536,10 +536,7 @@
 			}
 		},
 		{
-			"contents": "/*\n * schedule.js\n * ?\n *\n * Jonatan H Sundqvist\n * April 30 2015\n *\n *\n * TODO | - \n *        - \n *\n * SPEC | -\n *        -\n *\n */\n\n\n\nvar weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];\nvar schedule = (function() {\n\n})();\n\n\n// TODO: Move to separate file\nvar languages = {\n	'english': {\n		monday:    'Monday',\n		tuesday:   'Tuesday',\n		wednesday: 'Wednesday',\n		thursday:  'Thursday',\n		friday:    'Friday',\n		saturday:  'Saturday',\n		sunday:    'Sunday'\n	},\n\n	'spanish': {\n		monday:    'lunes',\n		tuesday:   'martes',\n		wednesday: 'miércoles',\n		thursday:  'jueves',\n		friday:    'viernes',\n		saturday:  'sábado',\n		sunday:    'domingo'\n	},\n\n	'swedish': {\n		monday:    'måndag',\n		tuesday:   'tisdag',\n		wednesday: 'onsdag',\n		thursday:  'torsdag',\n		friday:    'fredag',\n		saturday:  'lördag',\n		sunday:    'söndag'\n	}\n\n}\n\n\n\nfunction diagram(data) {\n	// var div = new DOMElement();\n}\n\n\n\n$(document).ready(function() {\n\n	// Highlight the current day\n	var today = new Date();\n	var day   = today.getDay();\n	console.log('Today is ' + weekdays[day] + '.');\n	// $('.weekdays .column div:not(:first-child)').addClass('activity'); // I could do this manually. Eh...\n	$('.' + weekdays[day]).addClass('current');\n\n\n	//\n	weekdays.map(function(day, index, days) {\n		console.log('.' + day);\n		$('.' + day).hover(function(element) {\n			$('.' + day).addClass('highlighted');\n		}, function(element) {\n			$('.' + day).removeClass('highlighted');\n		});\n	});\n\n\n	//\n	$('select[name=\"language\"]').change(function(ev) {\n		var element = this;\n		console.log(ev);\n		weekdays.slice(1, 6).map(function(day, i, days) {\n			$('.weekdays div.' + day + '> div:first-child').html(languages[element.value.toLowerCase()][day.toLowerCase()].toUpperCase());\n		});\n	});\n\n\n	//\n	$(document).mousemove(function(ev) {\n\n		var top    = $('.activities').offset().top\n		var bottom = $('.activities').innerHeight() + top;\n\n		if (ev.pageY < top || ev.pageY > bottom) { return; }\n\n		var time  = (ev.pageY - top) * (8*3600)/(bottom - top); //\n		var hours = String(Math.floor(time/3600));\n		var mins  = String(Math.floor(time/60)%60);\n		$('#ruler').css({'top': ev.pageY})\n		           .html((hours.length === 1 ? '0' + hours : hours) + ':' + (mins.length === 1 ? '0' + mins : mins));\n	});\n\n});",
 			"file": "schedule.js",
-			"file_size": 2405,
-			"file_write_time": 130750890258310399,
 			"settings":
 			{
 				"buffer_size": 2288,
@@ -547,10 +544,7 @@
 			}
 		},
 		{
-			"contents": "<!--  -->\n\n<!DOCTYPE html>\n\n<html>\n<head>\n	<meta encoding='UTF-8'>\n	<!-- meta language -->\n	<!-- meta author -->\n	<link rel='stylesheet' href='pageturner.css'>\n	<!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->\n	<!-- <script src='pageturner.js'></script> -->\n	<title>Page Turner</title>\n</head>\n<body>\n	<div class='binder'>\n		<div id='behind'  class='page'>I SHOULD BE BEHIND</div>\n		<div id='infront' class='page'>I SHOULD BE IN FRONT</div>\n	</div>\n</body>\n</html>",
 			"file": "pageturner.html",
-			"file_size": 533,
-			"file_write_time": 130749933174072015,
 			"settings":
 			{
 				"buffer_size": 513,
@@ -558,13 +552,10 @@
 			}
 		},
 		{
-			"contents": "/*\n *\n *\n */\n\n\n\nbody {\n	padding: 0pt;\n	margin:  0pt;\n}\n\n\n\n.binder {\n	width: 25%;\n	height: 80%;\n\n	margin: 60pt;\n	padding: 0pt;\n\n	position: absolute;\n	/*overflow: hidden;*/\n\n	-webkit-perspective: 1500px;\n	-webkit-perspective-origin: 50% 0%;\n\n}\n\n\n\n.binder:hover #infront.page {\n	-webkit-perspective: 600px;\n	-webkit-transform: rotateY(-60deg);\n	-webkit-transform-origin: 0% 50%;\n	-webkit-transition: -webkit-transform 3s;\n	/*perspective: 600px;*/\n}\n\n\n\n.page {\n	position: absolute;\n	width: 100%;\n	height: 100%;\n\n	padding: 12pt;\n	margin: 0pt;\n\n	text-align: center;\n	vertical-align: middle;\n\n	/*bottom: 0%;*/\n	/*-webkit-transition: all 0.4s ease-in;*/\n\n}\n\n\n\n#infront {\n	background-color: #CF0305;\n}\n\n\n.binder:hover #infront {\n	/*bottom: 100%;*/\n	/*-webkit-transition: all 1.5s ease-in;*/\n}\n\n\n#behind {\n	background-color: #CF03DD;\n}",
 			"file": "pageturner.css",
-			"file_size": 895,
-			"file_write_time": 130749934324298496,
 			"settings":
 			{
-				"buffer_size": 825,
+				"buffer_size": 871,
 				"line_ending": "Windows"
 			}
 		}
@@ -620,13 +611,13 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 105.0,
-		"last_filter": "check",
+		"height": 392.0,
+		"last_filter": "co",
 		"selected_items":
 		[
 			[
-				"check",
-				"Git: Checkout Tag"
+				"co",
+				"Git: Commit"
 			],
 			[
 				"ad",
@@ -637,12 +628,24 @@
 				"Git: Change Branch"
 			],
 			[
-				"close",
-				"Project: Close"
+				"git co",
+				"Git: Commit"
 			],
 			[
-				"co",
-				"Git: Commit"
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git",
+				"Git: Commit history"
+			],
+			[
+				"check",
+				"Git: Checkout Tag"
+			],
+			[
+				"close",
+				"Project: Close"
 			],
 			[
 				"add",
@@ -905,10 +908,6 @@
 				"Set Syntax: PythonImproved"
 			],
 			[
-				"git add",
-				"Git: Add Current File"
-			],
-			[
 				"project",
 				"Project: Save As"
 			],
@@ -957,15 +956,7 @@
 				"Git: Custom Command"
 			],
 			[
-				"git",
-				"Git: Graph All"
-			],
-			[
 				"Co",
-				"Git: Commit"
-			],
-			[
-				"git co",
 				"Git: Commit"
 			],
 			[
@@ -1137,7 +1128,7 @@
 				"Preferences: Package Control Settings – Default"
 			]
 		],
-		"width": 512.0
+		"width": 464.0
 	},
 	"console":
 	{
@@ -1190,6 +1181,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Jonatan/Desktop/Web dev/Schedule/schedule.html",
 		"/C/Users/Jonatan/Desktop/Web dev/Schedule/pageturner.html",
 		"/C/Users/Jonatan/Desktop/Web dev/Schedule/test.html",
 		"/C/Users/Jonatan/Desktop/Web dev/Sudoku/jokewordcount.py",
@@ -1316,8 +1308,7 @@
 		"/C/Users/Jonatan/Desktop/Python/Hangman.py",
 		"/C/Users/Jonatan/Desktop/Hemsida/Projekt/Bildspel/bildspel.html",
 		"/C/Users/Jonatan/Desktop/Hemsida/Projekt/Bildspel/bildspel.css",
-		"/C/Users/Jonatan/Desktop/Hemsida/Projekt/Bildspel/bildspel.js",
-		"/C/Users/Jonatan/Desktop/Python/modules/SwiftUtils/__init__.py"
+		"/C/Users/Jonatan/Desktop/Hemsida/Projekt/Bildspel/bildspel.js"
 	],
 	"find":
 	{
@@ -1521,11 +1512,10 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/SublimeLinter/fixed-syntaxes/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 60.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1544,8 +1534,8 @@
 						"selection":
 						[
 							[
-								1315,
-								1315
+								554,
+								554
 							]
 						],
 						"settings":
@@ -1554,10 +1544,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1560.0,
+						"translation.y": 480.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1584,10 +1574,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1020.0,
+						"translation.y": 960.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1603,8 +1593,8 @@
 						"selection":
 						[
 							[
-								374,
-								374
+								349,
+								349
 							]
 						],
 						"settings":
@@ -1616,7 +1606,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1625,15 +1615,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 825,
+						"buffer_size": 871,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								245,
-								245
+								633,
+								633
 							]
 						],
 						"settings":
@@ -1642,10 +1632,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
+						"translation.y": 339.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
