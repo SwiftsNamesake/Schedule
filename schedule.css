@@ -15,8 +15,9 @@ body {
 
 .schedule {
 	font-family: 'Helvetica';
-	overflow: hidden;
 	
+	position: relative;
+
 	padding-top: 50pt;
 
 	width: 80%;
@@ -24,6 +25,13 @@ body {
 	margin: auto;
 }
 
+
+.schedule .header {
+	font-family: 'Helvetica';
+	font-size: 34pt;
+
+	padding: 0pt;
+}
 
 
 .weekdays {
@@ -35,9 +43,12 @@ body {
 
 	/* Make nested columns of equal width */
 	display: table;
-	width: 70%;
+	width: 100%;
 	height: 100%;
 	table-layout: fixed;
+
+	margin: 0pt;
+	padding: 0pt;
 }
 
 
@@ -46,9 +57,20 @@ body {
 	display: table-cell;
 	/*height: 100%;*/
 	height: 360pt;
-	width: 20%;
+	/*width: 20%;*/
+	width: 90%;
+	
+	/*border-spacing: 12pt;*/
+	/*border-collapse: separate;*/
 	/*margin-left: 20pt;*/
 	/*margin-right: 20pt;*/
+}
+
+
+
+.cellpadding {
+	background-color: white;
+	padding: 8pt;
 }
 
 
@@ -78,7 +100,7 @@ body {
 
 	overflow: hidden;
 
-	background-color: #E4A2D7;
+	background-color: rgba(228, 162, 215, 0.85) /*#E4A2D7*/;
 	-webkit-transition: background-color 0.7s;
 }
 
