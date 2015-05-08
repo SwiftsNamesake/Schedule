@@ -18,7 +18,10 @@ body {
 	overflow: hidden;
 	
 	padding-top: 50pt;
-	/*margin: auto;*/
+
+	width: 80%;
+	height: 80%;
+	margin: auto;
 }
 
 
@@ -28,7 +31,7 @@ body {
 	font-size: 18pt;
 
 	/*margin: auto 30pt auto 30pt;*/
-	margin: auto;
+	/*margin: auto;*/
 
 	/* Make nested columns of equal width */
 	display: table;
@@ -41,7 +44,9 @@ body {
 
 .column {
 	display: table-cell;
-	height: 100%;
+	/*height: 100%;*/
+	height: 360pt;
+	width: 20%;
 	/*margin-left: 20pt;*/
 	/*margin-right: 20pt;*/
 }
@@ -133,3 +138,36 @@ body {
 	/*border: 1pt #13F solid;*/
 	/*box-shadow:inset 0px 0px 12px*/
 }
+
+
+
+/* Styling for specific days */
+.Monday {
+	background-color: red;
+}
+
+
+
+.Tuesday {
+	background-color: green;
+}
+
+
+
+.Wednesday {
+	background-color: orange;
+}
+
+
+
+.Thursday {
+	background-color: rebeccapurple;
+}
+
+
+
+.Friday {
+	background-color: fuchsia;
+}
+
+
