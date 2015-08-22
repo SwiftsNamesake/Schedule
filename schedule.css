@@ -7,7 +7,8 @@
 
 body {
 	/*background-image: url(2-pinksherbet-2.jpg);*/
-	/*-webkit-background-size: cover;*/
+	background-image: url(Old_world_map_May_2009_by_waywardmedic.jpg);
+	-webkit-background-size: cover;
 	overflow: hidden;
 }
 
@@ -69,7 +70,7 @@ body {
 
 
 .cellpadding {
-	background-color: white;
+	background-color: rgba(0,0,0,0);
 	padding: 8pt;
 }
 
@@ -164,32 +165,22 @@ body {
 
 
 /* Styling for specific days */
-.Monday {
-	background-color: red;
-}
+.Monday {}
 
 
 
-.Tuesday {
-	background-color: green;
-}
+.Tuesday {}
 
 
 
-.Wednesday {
-	background-color: orange;
-}
+.Wednesday {}
 
 
 
-.Thursday {
-	background-color: rebeccapurple;
-}
+.Thursday {}
 
 
 
-.Friday {
-	background-color: fuchsia;
-}
+.Friday {}
 
 

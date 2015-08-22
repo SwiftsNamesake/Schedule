@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"bac",
+				"background-image"
+			],
+			[
+				"border-c",
+				"border-collapse"
+			],
+			[
+				"pur",
+				"rebeccapurple"
+			],
+			[
 				"f",
 				"f	Anonymous Function"
 			],
@@ -18,10 +30,6 @@
 			[
 				"webkit-t",
 				"-webkit-transition"
-			],
-			[
-				"bac",
-				"background-color"
 			],
 			[
 				"margin",
@@ -506,14 +514,6 @@
 			[
 				"Create",
 				"CreatePlatforms"
-			],
-			[
-				"text",
-				"textOptions"
-			],
-			[
-				"So",
-				"soundGenerator"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "schedule.html",
 			"settings":
 			{
-				"buffer_size": 2853,
+				"buffer_size": 2654,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "schedule.css",
 			"settings":
 			{
-				"buffer_size": 1510,
+				"buffer_size": 2249,
 				"line_ending": "Windows"
 			}
 		},
@@ -539,7 +539,7 @@
 			"file": "schedule.js",
 			"settings":
 			{
-				"buffer_size": 2282,
+				"buffer_size": 2294,
 				"line_ending": "Windows"
 			}
 		},
@@ -552,13 +552,10 @@
 			}
 		},
 		{
-			"contents": "/*\n *\n *\n */\n\n\n\nbody {\n	padding: 0pt;\n	margin:  0pt;\n}\n\n\n\n.binder {\n	width: 25%;\n	height: 80%;\n\n	margin: 60pt;\n	padding: 0pt;\n\n	position: absolute;\n	/*overflow: hidden;*/\n\n	-webkit-perspective: 1500px;\n	-webkit-perspective-origin: 50% 0%;\n\n}\n\n\n\n.binder:hover #infront.page {\n	-webkit-perspective: 600px;\n	-webkit-transform: rotateY(-60deg);\n	-webkit-transform-origin: 0% 50%;\n	-webkit-transition: -webkit-transform 3s;\n	/*perspective: 600px;*/\n}\n\n\n\n.page {\n	position: absolute;\n	width: 100%;\n	height: 100%;\n\n	padding: 12pt;\n	margin: 0pt;\n\n	text-align: center;\n	vertical-align: middle;\n\n	/*bottom: 0%;*/\n	/*-webkit-transition: all 0.4s ease-in;*/\n\n}\n\n\n\n#infront {\n	background-color: #CF0305;\n}\n\n\n.binder:hover #infront {\n	/*bottom: 100%;*/\n	/*-webkit-transition: all 1.5s ease-in;*/\n}\n\n\n#behind {\n	background-color: #CF03DD;\n}",
 			"file": "pageturner.css",
-			"file_size": 895,
-			"file_write_time": 130749934324298496,
 			"settings":
 			{
-				"buffer_size": 825,
+				"buffer_size": 824,
 				"line_ending": "Windows"
 			}
 		}
@@ -614,17 +611,77 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 312.0,
-		"last_filter": "HTM",
+		"height": 266.0,
+		"last_filter": "html",
 		"selected_items":
 		[
 			[
-				"HTM",
+				"html",
 				"Set Syntax: HTML"
+			],
+			[
+				"ad",
+				"Git: Add..."
+			],
+			[
+				"co",
+				"Git: Commit"
 			],
 			[
 				"wra",
 				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"bran",
+				"Git: Change Branch"
+			],
+			[
+				"git ss",
+				"Git: Status"
+			],
+			[
+				"bra",
+				"Git: Change Branch"
+			],
+			[
+				"history",
+				"Git: Commit history"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git",
+				"Git: Commit history"
+			],
+			[
+				"check",
+				"Git: Checkout Tag"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"branch",
+				"Git: Change Branch"
+			],
+			[
+				"HTM",
+				"Set Syntax: HTML"
 			],
 			[
 				"snippet",
@@ -633,10 +690,6 @@
 			[
 				"htm",
 				"Set Syntax: HTML"
-			],
-			[
-				"ad",
-				"Project: Add Folder"
 			],
 			[
 				"synta",
@@ -653,10 +706,6 @@
 			[
 				"save",
 				"Project: Save As"
-			],
-			[
-				"html",
-				"Set Syntax: HTML"
 			],
 			[
 				"buil",
@@ -691,10 +740,6 @@
 				"Set Syntax: Python"
 			],
 			[
-				"co",
-				"Git: Commit"
-			],
-			[
 				"cs",
 				"Set Syntax: CSS3"
 			],
@@ -727,10 +772,6 @@
 				"Preferences: Key Bindings - User"
 			],
 			[
-				"add",
-				"Git: Add..."
-			],
-			[
 				"snippe",
 				"Snippet: html"
 			],
@@ -745,10 +786,6 @@
 			[
 				"gh",
 				"Build With: HaskellConsole - GHCi"
-			],
-			[
-				"close",
-				"Project: Close"
 			],
 			[
 				"build",
@@ -887,10 +924,6 @@
 				"Set Syntax: PythonImproved"
 			],
 			[
-				"git add",
-				"Git: Add Current File"
-			],
-			[
 				"project",
 				"Project: Save As"
 			],
@@ -939,15 +972,7 @@
 				"Git: Custom Command"
 			],
 			[
-				"git",
-				"Git: Graph All"
-			],
-			[
 				"Co",
-				"Git: Commit"
-			],
-			[
-				"git co",
 				"Git: Commit"
 			],
 			[
@@ -1101,34 +1126,6 @@
 			[
 				"mini",
 				"View: Toggle Minimap"
-			],
-			[
-				"jso",
-				"Set Syntax: JSON"
-			],
-			[
-				"gl",
-				"Set Syntax: OpenGL SL"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
-			],
-			[
-				"reposi",
-				"Preferences: Package Control Settings – Default"
-			],
-			[
-				"c++",
-				"Set Syntax: C++"
-			],
-			[
-				"rein",
-				"Indentation: Reindent Lines"
-			],
-			[
-				"syntax c",
-				"Set Syntax: C"
 			]
 		],
 		"width": 464.0
@@ -1184,9 +1181,11 @@
 	],
 	"file_history":
 	[
-		"/C/Users/Jonatan/Desktop/Web dev/Schedule/pageturner.html",
 		"/C/Users/Jonatan/Desktop/Web dev/Schedule/test.html",
 		"/C/Users/Jonatan/Desktop/Web dev/Sudoku/jokewordcount.py",
+		"/C/Users/Jonatan/Desktop/Web dev/Schedule/schedule.css",
+		"/C/Users/Jonatan/Desktop/Web dev/Schedule/schedule.html",
+		"/C/Users/Jonatan/Desktop/Web dev/Schedule/pageturner.html",
 		"/C/Users/Jonatan/Desktop/Git Sandbox/saga.txt",
 		"/C/Users/Jonatan/Desktop/Web dev/Sudoku/sudoku.css",
 		"/C/Users/Jonatan/Desktop/Web dev/Sudoku/sudoku.js",
@@ -1309,9 +1308,7 @@
 		"/C/Users/Jonatan/Dropbox/Norse Scenario (Aom)/Hangman.py",
 		"/C/Users/Jonatan/Desktop/Python/Hangman.py",
 		"/C/Users/Jonatan/Desktop/Hemsida/Projekt/Bildspel/bildspel.html",
-		"/C/Users/Jonatan/Desktop/Hemsida/Projekt/Bildspel/bildspel.css",
-		"/C/Users/Jonatan/Desktop/Hemsida/Projekt/Bildspel/bildspel.js",
-		"/C/Users/Jonatan/Desktop/Python/modules/SwiftUtils/__init__.py"
+		"/C/Users/Jonatan/Desktop/Hemsida/Projekt/Bildspel/bildspel.css"
 	],
 	"find":
 	{
@@ -1330,6 +1327,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"background-color",
+			"Helvetica",
+			"header",
+			"class='.header'",
+			"Schedule",
+			"span",
+			"><",
+			"slider",
+			"'>",
+			"stylesheet",
+			"''",
+			"Thursday",
+			"',",
+			", ",
+			"Monday",
+			"weekdays",
+			"</div>\n				<div class='activity'>",
+			".schedule ",
+			".schedule table tbody",
+			"</div>",
+			"Friday",
+			"</div>",
+			"'><",
+			", ",
 			"hours",
 			"mins",
 			"ev.pageY",
@@ -1433,31 +1454,7 @@
 			"a",
 			"data",
 			" num",
-			"Point",
-			"upp",
-			"low",
-			"row",
-			"col",
-			"number",
-			"all",
-			"foldr",
-			"fg",
-			"	",
-			"nth",
-			"getTile",
-			"Column",
-			"[",
-			"return",
-			"imag",
-			"g",
-			"branch",
-			"beg",
-			"position",
-			"anchor",
-			"4",
-			"name",
-			"options",
-			", "
+			"Point"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1493,7 +1490,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1502,20 +1499,50 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2853,
+						"buffer_size": 2654,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								738,
-								738
+								940,
+								940
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SublimeLinter/fixed-syntaxes/HTML/HTML.tmLanguage"
+							"syntax": "Packages/SublimeLinter/fixed-syntaxes/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "schedule.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								279,
+								279
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1525,60 +1552,33 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "schedule.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1510,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1444,
-								1444
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS3/CSS3.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1920.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
 					"buffer": 2,
 					"file": "schedule.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2282,
+						"buffer_size": 2294,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1961,
-								1961
+								1089,
+								1089
 							]
 						],
 						"settings":
 						{
 							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1579.0,
+						"translation.y": 837.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1594,8 +1594,8 @@
 						"selection":
 						[
 							[
-								374,
-								374
+								349,
+								349
 							]
 						],
 						"settings":
@@ -1616,26 +1616,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 825,
+						"buffer_size": 824,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								245,
-								245
+								633,
+								633
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS3/CSS3.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 240.0,
+						"translation.y": 1540.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1706,6 +1707,10 @@
 		"selected_items":
 		[
 			[
+				"cs",
+				"schedule.css"
+			],
+			[
 				"sc",
 				"schedule.js"
 			],
@@ -1724,10 +1729,6 @@
 			[
 				"ht",
 				"sudoku.html"
-			],
-			[
-				"cs",
-				"sudoku.css"
 			],
 			[
 				"ja",

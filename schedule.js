@@ -69,7 +69,7 @@ $(document).ready(function() {
 	// Highlight the current day
 	var today = new Date();
 	var day   = today.getDay();
-	console.log('Today is ' + weekdays[day] + '.');
+	console.log('Today is ' + weekdays[1 + day%5] + '.');
 	// $('.weekdays .column div:not(:first-child)').addClass('activity'); // I could do this manually. Eh...
 	$('.' + weekdays[day]).addClass('current');
 
